@@ -6,13 +6,26 @@
 </head>
 <body>
 <script>
-for (var number = 0; number <= 12; number += 2)
-console.log(number);
+// for (var number = 0; number <= 12; number += 2)
+// console.log(number);
 
 // Chapter 2 exercises
 // Write a loop that makes seven calls to console.log to output the following triangle:
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// #######
 
-
+var x = 0;
+var y = '#';
+while (x < 7) {
+  console.log(y);
+  y = y + '#';
+  x++;
+}
 </script>
 </body>
 </html>
