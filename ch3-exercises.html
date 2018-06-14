@@ -37,6 +37,58 @@ min(10,3);
 
 /*-----------------------------------------*/
 
+var isEven = function(x) {
+  if (x % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → false
+
+// Book solution:
+function isEven(n) {
+  if (n == 0)
+    return true;
+  else if (n == 1)
+    return false;
+  else if (n < 0)
+    return isEven(-n);
+  else
+    return isEven(n - 2);
+}
+
+/*-----------------------------------------*/
+
+// Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase "B" characters are in the string.
+
+var countBs = function(string) {
+  var Bs = "";
+  for (var n = 0; n < string.length; n++) {
+    if (string[n] === 'B') {
+      Bs += string[n];
+    }
+  }
+  return Bs.length;
+}
+
+var countChar = function(string, char) {
+  var chars = "";
+  for (var n = 0; n < string.length; n++) {
+    if (string[n] === char) {
+      chars += string[n];
+    }
+  }
+  return chars.length;
+}
+
+
 </script>
 </body>
 </html>
