@@ -41,6 +41,46 @@ function addEntry(events, didITurnIntoASquirrel) {
 // addEntry(["work", "icecream", "cauliflower", "lasagna", "touched tree", "brushed teeth"], false);
 // addEntry(["weekend", "cycling", "break", "peanuts", "beer"], true);
 
+// The sum of a range:
+function range(start, end, step) {
+  arr =[];
+    if (start < end && step > 0) {
+        for (var i = start; i <= end; i += step) {
+          arr.push(i);
+        }
+    }
+    else if (start > end && step < 0) {
+        for (var i = start; i >= end; i += step) {
+          arr.push(i);
+        }
+    }
+    else {
+      console.log(`Illogical arguments given.`)
+    }
+  let sum = arr.reduce((total, amount) => total + amount);
+  return sum;
+}
+
+// Reverse an array two ways: 1) By creating a new array, and 2) by reversing in place.
+
+a = [5,8,2,9,5,6,3,1];
+
+function reverseNew(a) {
+  arr = [];
+  for (var i = a.length; i >= 0; i--) {
+    arr.push(a[i]);
+  }
+  return arr;
+}
+
+function reverseInPlace(a) {
+  for (var i = 0; i <= Math.floor(a.length / 2); i++) {
+    var other = a[i];
+    a[i] = a[a.length - 1 - i];
+    a[a.length - 1 - i] = other;
+  }
+  return a;
+}
 </script>
 </body>
 </html>
